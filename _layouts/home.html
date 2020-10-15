@@ -270,39 +270,21 @@
              <h3 style="font-weight: 400;">Featured</h3>
              <hr class="w-50 mx-0 black">
 
+             {% for post in site.posts %} 
+             {% if post.tags contains "featured" %}
+             <div class="card my-2" style="width: 100%;box-shadow: none;background: rgba(0, 140, 255, 0.00);border-radius: 0;">
+              <div class="card-body">
+                <h5 class="card-title">{{post.title}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{post.categories}}</h6>
+                <a href="{{ post.url }}" class="card-link">Read</a>
+                <a  class="card-link px-2 rounded-pill text-light  " id="minright">{{post.readTime}} minutes read</a>
+              </div>
+            </div>
+            {% endif %} 
+            {% endfor %} 
 
-             <div class="card my-2" style="width: 100%;box-shadow: none;background: rgba(0, 140, 255, 0.00);border-radius: 0;">
-              <div class="card-body">
-                <h5 class="card-title">Psychology of Memory | Is it dark enough?</h5>
-                <h6 class="card-subtitle mb-2 text-muted">category</h6>
-                <a href="#" class="card-link">Read</a>
-                <a  class="card-link px-2 rounded-pill text-light  " id="minright">3 minutes read</a>
-              </div>
-            </div>
-             <div class="card my-2" style="width: 100%;box-shadow: none;background: rgba(0, 140, 255, 0.00);border-radius: 0;">
-              <div class="card-body">
-                <h5 class="card-title">Psychology of Memory | Is it dark enough?</h5>
-                <h6 class="card-subtitle mb-2 text-muted">category</h6>
-                <a href="#" class="card-link">Read</a>
-                <a  class="card-link px-2 rounded-pill text-light  " id="minright">3 minutes read</a>
-              </div>
-            </div>
-             <div class="card my-2" style="width: 100%;box-shadow: none;background: rgba(0, 140, 255, 0.00);border-radius: 0;">
-              <div class="card-body">
-                <h5 class="card-title">Psychology of Memory | Is it dark enough?</h5>
-                <h6 class="card-subtitle mb-2 text-muted">category</h6>
-                <a href="#" class="card-link">Read</a>
-                <a  class="card-link px-2 rounded-pill text-light  " id="minright">3 minutes read</a>
-              </div>
-            </div>
-             <div class="card my-2" style="width: 100%;box-shadow: none;background: rgba(0, 140, 255, 0.00);border-radius: 0;">
-              <div class="card-body">
-                <h5 class="card-title">Psychology of Memory | Is it dark enough?</h5>
-                <h6 class="card-subtitle mb-2 text-muted">category</h6>
-                <a href="#" class="card-link">Read</a>
-                <a  class="card-link px-2 rounded-pill text-light  " id="minright">3 minutes read</a>
-              </div>
-            </div>
+
+            
              
              
              

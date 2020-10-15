@@ -1,9 +1,12 @@
 ---
 layout: post
-title:  "Welcome2 to Jekyll!"
+title:  "Welcome4 to Jekyll!"
 date:   2020-10-13 13:41:25 +0530
 categories: jekyll
 author: Debaprasad Paul
+tag: featured
+readTime: 7
+social: "https://www.linkedin.com/in/debaprasad-paul-a03421138/"
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
