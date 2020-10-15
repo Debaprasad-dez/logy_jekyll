@@ -2,11 +2,12 @@
 layout: post
 title:  "Welcome3 to Jekyll!"
 date:   2020-10-13 13:41:25 +0530
-categories: jekyll
+categories: lifestyle
 author: Debaprasad Paul
 tag: featured
 readTime: 3
 social: "https://www.linkedin.com/in/debaprasad-paul-a03421138/"
+highlight: "Jekyll also offers powerful support for code snippets"
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

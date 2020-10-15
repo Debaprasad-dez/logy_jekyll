@@ -166,6 +166,7 @@
     <!--/.Indicators-->
     <!--Slides-->
     <div class="carousel-inner" role="listbox">
+
       <div class="carousel-item active">
         <div class="view" id="viewcar">
           <img class="d-block w-100" src="https://res.cloudinary.com/engineering-com/image/upload/w_640,h_640,c_limit,q_auto,f_auto/bigstock-Abstract-Technology-Ui-Futuris-228406639_gp1d3a.jpg"
@@ -173,11 +174,13 @@
           <div class="mask rgba-black-strong"></div>
         </div>
         <div class="carousel-caption  text-left">
-          <h4 style="font-size: auto;">Jan Swasthya Sahyog | Ganiyari </h4>
+          <h4 style="font-size: auto;">First Featured article headline</h4>
           <p>2 minutes read</p>
         </div>
       </div>
-      <div class="carousel-item">
+
+      
+      <div class="carousel-item ">
         <!--Mask color-->
         <div class="view" id="viewcar" >
           <img class="d-block w-100" src="https://www.elsevier.com/__data/assets/image/0010/827821/innovative-tech-in-medicine.jpg"
@@ -185,12 +188,12 @@
           <div class="mask rgba-black-strong"></div>
         </div>
         <div class="carousel-caption  text-left">
-          <h4 class="" style="font-size: auto;">Psychology of Memory | Is it dark enough?
+          <h4 class="" style="font-size: auto;">Second Featured article headline
           </h4>
           <p>3 minutes read</p>
         </div>
       </div>
-      <div class="carousel-item">
+      <div class="carousel-item ">
         <!--Mask color-->
         <div class="view" id="viewcar">
           <img class="d-block w-100" src="https://builtin.com/sites/default/files/styles/og/public/2019-07/blockchain-healthcare.jpg"
@@ -198,11 +201,22 @@
           <div class="mask rgba-black-strong"></div>
         </div>
         <div class="carousel-caption  text-left">
-          <h4 class="" style="font-size: auto;">Let's Start Dreaming
+          <h4 class="" style="font-size: auto;">Third Featured article headline
           </h4>
           <p>4 minutes read</p>
         </div>
       </div>
+
+
+
+
+
+      
+
+
+     
+
+      
     </div>
     <!--/.Slides-->
     <!--Controls-->
@@ -246,11 +260,11 @@
 
                             <h5 class="card-title">{{ post.title }}</h5>
                           </a>
-                            <p class="card-text">Psychology of Memory | Is it dark enough? Psychology of Memory | Is it dark enough?</p>
-                            <p>{{ post.date }}
+                            <p class="card-text">{{ post.highlight }}</p>
+                            <p>{{ post.date | date: '%b %d, %Y' }}
                               <hr class="w-50 mx-0">
                             </p>
-                            <a class="bg-dark w-auto text-light px-2 rounded-pill" style="pointer-events: none;">3 minutes read</a>
+                            <a class="bg-dark w-auto text-white px-2 rounded-pill" style="pointer-events: none;">{{post.readTime}} minutes read</a>
                         </div>
                     </div>
                 </div>
@@ -277,7 +291,7 @@
                 <h5 class="card-title">{{post.title}}</h5>
                 <h6 class="card-subtitle mb-2 text-muted">{{post.categories}}</h6>
                 <a href="{{ post.url }}" class="card-link">Read</a>
-                <a  class="card-link px-2 rounded-pill text-light  " id="minright">{{post.readTime}} minutes read</a>
+                <a  class="card-link px-2 rounded-pill text-white  " id="minright">{{post.readTime}} minutes read</a>
               </div>
             </div>
             {% endif %} 
