@@ -7,6 +7,8 @@ author: Debaprasad Paul
 readTime: 11
 social: "https://www.linkedin.com/in/debaprasad-paul-a03421138/"
 highlight: "Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways"
+coverimage: "https://www.sestek.com/wp-content/uploads/2020/03/artificial-intelligence-ai-the-secret-weapon-for-healthcare.jpg"
+authorimage: "https://pbs.twimg.com/profile_images/1251947398751911937/lHL1HLiu.png"
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

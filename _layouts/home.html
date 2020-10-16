@@ -37,12 +37,17 @@
       background: rgb(250, 250, 250);
      
     }
+    #contentx img{
+      width: 100%;
+      margin-top: 2%;
+      margin-bottom: 2%;
+    }
     p{
       font-size: 2vh;
     }
     #viewcar{
-      border-radius: 50px;
-      height: 75vh;
+      border-radius: 0px 0px 50px 50px;
+      height: 50vh;
     }
     #viewcar img{
       min-height: 100%;
@@ -80,7 +85,6 @@
     }
     @media screen and (max-width: 767px) {
        #viewcar {
-          border-radius: 15px;
           height: 50vh;
         }
        #viewcar2 {
@@ -108,7 +112,7 @@
         <div class="container ">
         
             <!-- Navbar brand -->
-            <a class="navbar-brand" href="#" style="font-family: 'Poppins', sans-serif;font-weight: 600;">Logy.<span style="color: rgb(53, 138, 235);">AI</span></a>
+            <a class="navbar-brand p-0" href="/logy_jekyll/" style="font-family: 'Poppins', sans-serif;font-weight: 600;font-size: 30px;">Logy.<span style="color: #428bca;">AI</span></a>
           
             <!-- Collapse button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
@@ -123,12 +127,12 @@
               <ul class="mr-auto"></ul>
               <!-- Links -->
           
-              <form class="form-inline">
+              <form class="form-inline p-0 m-0">
                 <div class="md-form my-0 mx-3 ">
-                  <a href="" class="text-white" style="font-weight:500 ;">HOME</a>
+                  <a href="/logy_jekyll/" class="" style="font-weight:500 ;font-size: 12px;color: #5697d0;">HOME</a>
                 </div>
                 <div class="md-form my-0 mx-3 ">
-                  <a href="" class="text-primary" style="font-weight:500 ;">ARTICLES</a>
+                  <a href="/logy_jekyll/" class="text-white" style="font-weight:500 ;font-size: 12px;">ARTICLES</a>
                 </div>
               </form>
             </div>
@@ -141,10 +145,6 @@
 
 
 
-<div class="container mt-3">
-    
-    <p class="text-center h4" style="color: rgb(53, 138, 235);"> We help you bring your ideas to reality</p>
-</div>
 
 
 
@@ -157,8 +157,7 @@
 
 
 
-
- <div class="container mt-3 mb-5">
+ <div class="container mb-5">
      <!--Carousel Wrapper-->
 <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
     <!--Indicators-->
@@ -168,45 +167,38 @@
     <div class="carousel-inner" role="listbox">
 
       <div class="carousel-item active">
-        <div class="view" id="viewcar">
-          <img class="d-block w-100" src="https://res.cloudinary.com/engineering-com/image/upload/w_640,h_640,c_limit,q_auto,f_auto/bigstock-Abstract-Technology-Ui-Futuris-228406639_gp1d3a.jpg"
-            alt="First slide">
-          <div class="mask rgba-black-strong"></div>
-        </div>
-        <div class="carousel-caption  text-left">
-          <h4 style="font-size: auto;">First Featured article headline</h4>
-          <p>2 minutes read</p>
-        </div>
-      </div>
-
-      
-      <div class="carousel-item ">
-        <!--Mask color-->
-        <div class="view" id="viewcar" >
+        <div class="view bg-dark" id="viewcar">
           <img class="d-block w-100" src="https://www.elsevier.com/__data/assets/image/0010/827821/innovative-tech-in-medicine.jpg"
-            alt="Second slide">
+          alt="First slide">
           <div class="mask rgba-black-strong"></div>
         </div>
         <div class="carousel-caption  text-left">
-          <h4 class="" style="font-size: auto;">Second Featured article headline
-          </h4>
-          <p>3 minutes read</p>
+          <h4 style="font-size: auto;"> No title</h4>
+          <p>1 minute read</p>
         </div>
       </div>
-      <div class="carousel-item ">
-        <!--Mask color-->
-        <div class="view" id="viewcar">
-          <img class="d-block w-100" src="https://builtin.com/sites/default/files/styles/og/public/2019-07/blockchain-healthcare.jpg"
-            alt="Third slide">
-          <div class="mask rgba-black-strong"></div>
-        </div>
-        <div class="carousel-caption  text-left">
-          <h4 class="" style="font-size: auto;">Third Featured article headline
-          </h4>
-          <p>4 minutes read</p>
-        </div>
-      </div>
+    
+      {% for post in site.posts %} 
+         {% if post.tags contains "featured" %}
+         <div class="carousel-item ">
+           <!--Mask color-->
+           <div class="view" id="viewcar" >
+             <img class="d-block w-100" src="{{ post.coverimage }}"
+             alt="Second slide">
+             <div class="mask rgba-black-strong"></div>
+            </div>
+            <div class="carousel-caption  text-left">
+              <a href="{{ post.url | prepend:site.baseurl }}" class="text-white">
 
+                <h4 class="" style="font-size: auto;">{{ post.title }}
+                </h4>
+                <p>{{ post.readTime }} minutes read</p>
+              </a>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+      
 
 
 
@@ -239,7 +231,7 @@
  <div class="container mt-4 mb-4">
      <div class="row">
          <div class="col-md-9">
-          <h3 style="font-weight: 400;">Latest Posts</h3>
+          <h5 style="font-weight: 400;">Latest Posts</h5>
           
           <hr class="w-50 mx-0 black">
 
@@ -252,7 +244,7 @@
                 <div class="row no-gutters">
                   
                     <div class="col-sm-6">
-                        <img class="card-img" id="viewcar2" src="https://builtin.com/sites/default/files/styles/og/public/2019-07/blockchain-healthcare.jpg" alt="Suresh Dasari Card">
+                        <img class="card-img" id="viewcar2" src="{{ post.coverimage }}" alt="Suresh Dasari Card">
                     </div>
                     <div class="col-sm-6">
                         <div class="card-body">
@@ -281,7 +273,7 @@
             
          </div>
          <div class="col-md-3 ">
-             <h3 style="font-weight: 400;">Featured</h3>
+             <h5 style="font-weight: 400;">Featured</h5>
              <hr class="w-50 mx-0 black">
 
              {% for post in site.posts %} 

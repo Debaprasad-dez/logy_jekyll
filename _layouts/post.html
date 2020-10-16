@@ -44,12 +44,17 @@ layout: post
     body{
       background: rgb(250, 250, 250);
     }
+    #contentx img{
+      width: 100%;
+      margin-top: 2%;
+      margin-bottom: 2%;
+    }
     p{
       font-size: 2vh;
     }
     #viewcar{
-      border-radius: 50px;
-      height: 75vh;
+      border-radius: 0px 0px 50px 50px;
+      height: 50vh;
     }
     #viewcar img{
       min-height: 100%;
@@ -87,7 +92,6 @@ layout: post
     }
     @media screen and (max-width: 767px) {
        #viewcar {
-          border-radius: 15px;
           height: 50vh;
         }
        #viewcar2 {
@@ -110,7 +114,7 @@ layout: post
         <div class="container ">
         
             <!-- Navbar brand -->
-            <a class="navbar-brand" href="#" style="font-family: 'Poppins', sans-serif;font-weight: 600;">Logy.<span style="color: rgb(53, 138, 235);">AI</span></a>
+            <a class="navbar-brand p-0" href="/logy_jekyll/" style="font-family: 'Poppins', sans-serif;font-weight: 600;font-size: 30px;">Logy.<span style="color: #428bca;">AI</span></a>
           
             <!-- Collapse button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
@@ -125,12 +129,12 @@ layout: post
               <ul class="mr-auto"></ul>
               <!-- Links -->
           
-              <form class="form-inline">
+              <form class="form-inline p-0 m-0">
                 <div class="md-form my-0 mx-3 ">
-                  <a href="" class="text-white" style="font-weight:500 ;">HOME</a>
+                  <a href="/logy_jekyll/" class="" style="font-weight:500 ;font-size: 12px;color: #5697d0;">HOME</a>
                 </div>
                 <div class="md-form my-0 mx-3 ">
-                  <a href="" class="text-primary" style="font-weight:500 ;">ARTICLES</a>
+                  <a href="/logy_jekyll/" class="text-white" style="font-weight:500 ;font-size: 12px;">ARTICLES</a>
                 </div>
               </form>
             </div>
@@ -193,10 +197,9 @@ layout: post
     <div class="row">
         <div class="col-md-9">
           
-            
-            <img class="w-100 pr-md-5 pb-4" src="https://res.cloudinary.com/engineering-com/image/upload/w_640,h_640,c_limit,q_auto,f_auto/bigstock-Abstract-Technology-Ui-Futuris-228406639_gp1d3a.jpg" alt="">
+        <img class="w-100 mb-2" src="{{ page.coverimage }}" alt="">
         
-        <div>
+        <div class="w-100" id="contentx">
           {{ content }}
         </div>
         <div class="col-md-7 p-0">
@@ -247,7 +250,7 @@ layout: post
 
                 </div>
                 <div class="col-3">
-                    <img class="w-100 tile p-1" style="border-radius: 15px;" src="https://images.unsplash.com/photo-1551601651-71a596031b84?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=496&q=80" alt="">
+                    <img class="w-100 tile p-1" style="border-radius: 15px;" src="{{ page.authorimage }}" alt="">
                 </div>
             </div>
           </div>
@@ -257,7 +260,7 @@ layout: post
            
         </div>
         <div class="col-md-3 ">
-          <h3 style="font-weight: 400;">Featured</h3>
+          <h5 style="font-weight: 400;">Featured</h5>
           <hr class="w-50 mx-0 black">
 
           {% for post in site.posts %} 
@@ -266,7 +269,7 @@ layout: post
            <div class="card-body">
              <h5 class="card-title">{{post.title}}</h5>
              <h6 class="card-subtitle mb-2 text-muted">{{post.categories}}</h6>
-             <a href="{{ post.url }}" class="card-link">Read</a>
+             <a href="{{ post.url | prepend:site.baseurl}}" class="card-link">Read</a>
              <a  class="card-link px-2 rounded-pill text-white  " id="minright">{{post.readTime}} minutes read</a>
            </div>
          </div>

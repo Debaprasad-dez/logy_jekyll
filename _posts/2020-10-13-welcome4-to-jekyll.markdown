@@ -8,6 +8,8 @@ tag: featured
 readTime: 7
 social: "https://www.linkedin.com/in/debaprasad-paul-a03421138/"
 highlight: "for more info on how to get the most out of Jekyll. File all bugs/feature requests at"
+coverimage: "https://i.pinimg.com/originals/ca/1d/21/ca1d2143dea8f08a318c9989af349cb4.jpg"
+authorimage: "https://www.wired.com/wp-content/uploads/2017/08/kevin-systrom-instagram.jpg"
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

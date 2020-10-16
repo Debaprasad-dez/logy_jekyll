@@ -8,6 +8,8 @@ tag: featured
 readTime: 5
 social: "https://www.linkedin.com/in/anandpanchbhai/"
 highlight: "Jekyll requires blog post files to be named according to the following format"
+coverimage: "https://securityintelligence.com/wp-content/uploads/2019/11/external_the-potential-and-perils-of-the-iot-in-healthcare.jpg"
+authorimage: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT9Z1Z9vJxv--iDjhk26tgSiqvweOAvd3W-wA&usqp=CAU"
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
