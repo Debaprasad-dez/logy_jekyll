@@ -256,7 +256,7 @@
                     </div>
                     <div class="col-sm-6">
                         <div class="card-body">
-                          <a href="{{ post.url }}">
+                          <a href="{{ post.url | prepend:site.baseurl }}">
 
                             <h5 class="card-title">{{ post.title }}</h5>
                           </a>
@@ -290,7 +290,7 @@
               <div class="card-body">
                 <h5 class="card-title">{{post.title}}</h5>
                 <h6 class="card-subtitle mb-2 text-muted">{{post.categories}}</h6>
-                <a href="{{ post.url }}" class="card-link">Read</a>
+                <a href="{{ post.url | prepend:site.baseurl}}" class="card-link">Read</a>
                 <a  class="card-link px-2 rounded-pill text-white  " id="minright">{{post.readTime}} minutes read</a>
               </div>
             </div>
